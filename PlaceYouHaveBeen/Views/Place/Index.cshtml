@@ -1,0 +1,30 @@
+@using Places.Models;
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Places You Have Been</title>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    </head>
+    <body>
+        <div class="container">
+            <h1>✈️Your places✈️</h1>
+            @if (Model.Count == 0)
+            {
+                <p>There is no list yet! Let's add a new place from <a href="/places/new">here</a>!</p>
+            }
+
+        <ul class="list-group">
+            @foreach (Place place in Model)
+            {
+                <li class="list-group-item">
+                    I have visited @place.City, @place.Country!
+                </li>
+            }
+        </ul>
+        
+        <h4><a href="/places/new">Add more city🚀</a></h4>
+        </div>
+    </body>
+</html>

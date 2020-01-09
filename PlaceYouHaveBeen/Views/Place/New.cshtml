@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Places You Have Been</title>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+        <style>
+            .btn {
+                min-width: 300px;
+                display: block;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form action="/places" method="post">
+                <h1>Add New place That You Have Visitied</h1>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="city">Enter the city:</label>
+                        <input class="form-control" id="city" name="city" type="text" placeholder="city name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="country">Enter the country:</label>
+                        <input class="form-control" id="country" name="country" type="text" placeholder="country name">
+                    </div>
+                </div>
+                <button class="btn btn-primary">Add place</button>
+            </form>
+        </div>
+    </body>
+</html>
