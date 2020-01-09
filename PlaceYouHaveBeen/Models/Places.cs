@@ -6,12 +6,14 @@ namespace Places.Models
     {
         public string City { get; set; }
         public string Country { get; set; }
+        public string Journal { get; set; }
         private static List<Place> _instances= new List<Place>{};
 
-        public Place(string city, string country)
+        public Place(string city, string country, string journal)
         {
             City = city;
             Country = country;
+            Journal = journal;
             _instances.Add(this);
         }
 

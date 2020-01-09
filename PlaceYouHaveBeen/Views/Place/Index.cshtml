@@ -19,7 +19,8 @@
                 @foreach (Place place in Model)
                 {
                     <li class="list-group-item">
-                        I have visited @place.City, @place.Country!
+                        <p>I have visited @place.City, @place.Country!</P>
+                        <p>@place.Journal</p>
                     </li>
                 }
             </ul>
