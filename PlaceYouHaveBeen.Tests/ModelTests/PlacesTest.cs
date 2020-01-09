@@ -16,7 +16,7 @@ namespace Places.Tests
         [TestMethod]
         public void PlaceConstructor_CreateInstanceOfPlace_Place()
         {
-            Place newPlace = new Place("Tokyo", "Japan");
+            Place newPlace = new Place("Tokyo", "Japan", "This is the journal of the trip to Tokyo.");
             Assert.AreEqual(typeof(Place), newPlace.GetType());
         }
     }
