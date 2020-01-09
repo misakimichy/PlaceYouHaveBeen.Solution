@@ -15,16 +15,19 @@
                 <p>There is no list yet! Let's add a new place from <a href="/places/new">here</a>!</p>
             }
 
-        <ul class="list-group">
-            @foreach (Place place in Model)
-            {
-                <li class="list-group-item">
-                    I have visited @place.City, @place.Country!
-                </li>
-            }
-        </ul>
-        
-        <h4><a href="/places/new">Add more city🚀</a></h4>
+            <ul class="list-group">
+                @foreach (Place place in Model)
+                {
+                    <li class="list-group-item">
+                        I have visited @place.City, @place.Country!
+                    </li>
+                }
+            </ul>
+            <h4><a href="/places/new">Add more city🚀</a></h4>
+
+            <form action="/places/delete" method="post">
+                <button class="btn btn-danger" name="button">Clear All Cities</button>
+            </form>
         </div>
     </body>
 </html>
